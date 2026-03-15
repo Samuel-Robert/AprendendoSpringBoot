@@ -1,4 +1,4 @@
-package dev.java10x.AprendendoSpringBoot;
+package dev.java10x.AprendendoSpringBoot.Pessoas;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
