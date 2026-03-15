@@ -1,9 +1,7 @@
 package dev.java10x.AprendendoSpringBoot.Pessoas;
 
-import dev.java10x.AprendendoSpringBoot.Missoes.CarroModel;
+import dev.java10x.AprendendoSpringBoot.Carros.CarroModel;
 import jakarta.persistence.*;
-
-import java.util.List;
 
 //  Entity ele transforma uma classe em uma entidade do BD
 @Entity
@@ -16,7 +14,10 @@ public class PessoasModel {
     private String nome;
     private String email;
     private int idade;
-    private List<CarroModel> missao;
+
+    // OnetoMany - uma pessoa pode ter vários carros
+    @OneToMany(mappedBy = "pessoa")
+    private CarroModel carro;
 
     public PessoasModel() {
     }

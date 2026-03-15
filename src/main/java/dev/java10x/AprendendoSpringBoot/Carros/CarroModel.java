@@ -1,4 +1,4 @@
-package dev.java10x.AprendendoSpringBoot.Missoes;
+package dev.java10x.AprendendoSpringBoot.Carros;
 
 import dev.java10x.AprendendoSpringBoot.Pessoas.PessoasModel;
 import jakarta.persistence.*;
@@ -15,6 +15,9 @@ public class CarroModel {
     private int ano;
     private int valor;
 
+    // Many to One - um carro só pode ter uma pessoa(dono)
+    @ManyToOne
+    @JoinColumn(name = "pessoa_id")// foreign key/chave estrangeira
     private PessoasModel pessoa;
 
     public CarroModel() {
